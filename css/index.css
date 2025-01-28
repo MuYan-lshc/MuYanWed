@@ -1,0 +1,14 @@
+*{
+
+}
+.up,.in,.down{
+    margin:auto;
+    text-align: center;
+    font-size: 64px;
+    float: left;
+    background:red;
+    font-size: 8vw; /* 24px (16px * 1.5) */
+}
+.up,.down{
+    padding-top: 65px;
+}
