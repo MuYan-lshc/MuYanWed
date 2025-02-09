@@ -15,42 +15,9 @@
   </style>
 </head>
 <body>
-  <h1>API Response</h1>
+  <h1>deepseek/deepseek-r1:free</h1>
+  
   <div id="output">Loading...</div>
-
-  <script>
-    async function fetchData() {
-      try {
-        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            "Authorization": "Bearer  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",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            "model": "deepseek/deepseek-r1:free",
-            "messages": [
-              {"role": "user", "content": "What is the meaning of life?"}
-            ],
-            "top_p": 1,
-            "temperature": 1,
-            "repetition_penalty": 1
-          })
-        });
-
-        const data = await response.json(); // 将响应解析为 JSON
-        displayOutput(data); // 将数据展示到页面中
-      } catch (error) {
-        displayOutput({ error: error.message }); // 如果有错误，展示错误信息
-      }
-    }
-
-    function displayOutput(data) {
-      const outputElement = document.getElementById("output");
-      outputElement.textContent = data.choices[0].message.content; // 格式化输出
-    }
-
-    fetchData(); // 调用函数
-  </script>
+  <script src="../js/openrouter.js"></script>
 </body>
 </html>
