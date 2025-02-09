@@ -5,7 +5,7 @@ async function fetchData() {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer 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",
+          "Authorization": "Bearer ",
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -36,4 +36,5 @@ async function fetchData() {
     // outputElement.textContent = json.stringify(data,null,2)
 
   }
+
 
