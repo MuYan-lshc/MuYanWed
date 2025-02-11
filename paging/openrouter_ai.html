@@ -4,20 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>API Response</title>
-  <style>
-    #output {
-      margin-top: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      white-space: pre-wrap; /* 保留格式 */
-    }
-  </style>
+  <link rel="stylesheet" href="../css/openrouter.css">
 </head>
 <body>
+ <div>
+  <input type="password" name="Api_key" id="Api_key">
+  <input type="button" value="保存" onclick=skyString()>
+  <input type="button" value="清除" onclick="SkyRm()">
+  <input type="checkbox" name="look_key" id="look_key" >
+  <label for="look_key">显示内容</label>
+ </div>
   <h1>deepseek/deepseek-r1:free</h1>
   
-  <div id="output">Loading...</div>
-  <script src="../js/openrouter.js"></script>
+  <div id="output">
+    Loading...
+  </div>
+  <footer>
+    <input type="text" id="input">
+  </footer>
+  <!-- <script src="../js/openrouter.js"></script> -->
+   <script>
+
+    const key = document.getElementById("Api_key");
+    const look_key = document.getElementById("look_key")     
+    var Api_key  = undefined
+
+    startKey()
+     
+    function startKey() {
+      if (!localStorage.getItem("Api_key")){
+        Api_key = "请输入Apikey"
+        key.placeholder=Api_key
+      }else{
+        Api_key = localStorage.getItem("Api_key")
+        key.value = Api_key
+      }}
+
+      // 保存
+    function skyString() {
+      localStorage.setItem("Api_key",key.value)
+      alert("保存成功")
+    }
+
+    function SkyRm(){
+      localStorage.clear()	
+    }
+
+    look_key.addEventListener("change", ()=> {   
+      if (look_key.checked) {
+        key.type = "text"; // 显示内容
+      } else {
+        key.type = "password"; // 隐藏内容
+      }
+    })
+
+   </script>
 </body>
 </html>

@@ -1,11 +1,12 @@
 fetchData(); // 调用函数
 
 async function fetchData() {
+    const sky="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"
     try {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer ",
+          "Authorization": "Bearer "+sky,
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
