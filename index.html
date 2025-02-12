@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MuYan的个人网站</title>
     <link rel="shortcut icon" href="./images/MuYan.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        .col {
+            font-size: 120%;
+            border: 1px solid #dee2e6; /* 使用Bootstrap默认边框颜色 */
+            border-radius: 1rem; /* 圆角大小，可以根据需要调整 */
+            margin: 10px; /* 添加底部外边距以分开各项目 */
+            max-width: fit-content;
+        }
+        .label{
+            display: block;
+            text-align: center;
+            height: auto;
+            color: #000;
+            text-decoration: none;
+        }
+        .col:hover{
+            background-color: aqua;
+        }
+    </style>
 </head>
-<body class="container-fluid">  
-    <h1>
-        新年到，我给你们送上一副对联吧。
-    </h1>
-    <h5>祝，新的一年 合家欢乐，万事如意</h5>
-<strong>
-    <div class="row ">
-        <div class="col-2 up">
-            龙蛇共舞迎新岁
+<body>
+    <h1>MuYan的个人网站</h1>
+    <div>
+        <h5>主页</h5>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a class="label" href="./paging/openrouter_ai.html">openrouter_ai</a>
+                </div>
+                <div class="col">
+                    <a class="label" href="./birthday">生日快乐了</a>
+                </div>
+            </div>
         </div>
-        <div class="col-5 in">
-           福 欢度春节 福
-        </div>
-        <div class="col-2 down">
-            福禄双全贺佳节
-        </div>
-    </div>    
-</strong>
-
+    </div>
 </body>
 </html>
