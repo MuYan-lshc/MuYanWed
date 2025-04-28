@@ -133,6 +133,10 @@ canvas {
   height: auto;
 }
 
+.six .lydia-dp{
+    width: 400px;  /* 具体尺寸 */
+    height: auto;
+}
 .six .hat {
   position: absolute;
   width: 80px;
@@ -225,7 +229,7 @@ canvas {
 .wish-hbd {
   font-size: 3em;
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .wish h5 {
